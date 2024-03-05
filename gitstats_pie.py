@@ -76,7 +76,7 @@ def pie_chart():
     plt.legend(loc='best', labels=labels)
 
     plt.title(f'Distribution of Languages in {username}`s Repositories',fontweight='bold', fontsize=18, color='white')
-    plt.savefig('lang-statistics.png', bbox_inches='tight',  facecolor='#24292e')
+    plt.savefig('lang-statistics.png', bbox_inches='tight',  transparens=True)
     plt.show()
     
 pie_chart()
