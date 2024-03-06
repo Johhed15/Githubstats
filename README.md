@@ -2,6 +2,7 @@
 
 Just Copy the code from the files above and follow the steps below to create your own GitHub-stats!! 
 
+## Step 1:
 ```Python
 
 """
@@ -16,11 +17,14 @@ In this file you can change how Github should calculate each file with the follo
 ```
 <br>
 
-## Go to settings on github and then click on developer settings to generate a token and save it!
+## Step 2:
+
+### Go to settings on github and then click on developer settings and then generate a token, remember to save it!
 
 
 In the following code you should add your Github username and the created token
 <br>
+
 ```Python
 
 # GitHub API base URL
@@ -70,3 +74,9 @@ def get_languages(repos):
     return sorted_languages
 
 ```
+
+## Step 3:
+
+Now you just need to run these functions to doawnload the data, or you could use my pie_chart function which does it for you to create the vizualisation!
+
+Now you are done!!
