@@ -40,7 +40,7 @@ def get_languages(repos):
     return sorted_languages
 
 # creating pie chart and saving it
-def pie_chart(text_color):
+def pie_chart(text_color='red',transparent=True):
     # getting our data
     rep=get_repositories()
     lang = get_languages(rep)
@@ -76,7 +76,7 @@ def pie_chart(text_color):
     plt.legend(loc='best', labels=labels)
 
     plt.title(f'Distribution of Languages in {username}`s Repositories',fontweight='bold', fontsize=18, color=text_color)
-    plt.savefig('lang-statistics.png', bbox_inches='tight',  transparens=True)
+    plt.savefig('lang-statistics.png', bbox_inches='tight',  transparens=transparent)
     plt.show()
     
-pie_chart('red')
+pie_chart()
