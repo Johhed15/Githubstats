@@ -83,7 +83,7 @@ def get_languages(repos):
 
 Now you just need to run these functions to download the data, or you could use my pie_chart function which does it for you to create the vizualisation!
 
-When running the pie_chart funtion you have the option to switch the text and label color to whatever you want, you also have the option to remove the transparent option for the saved png which then will be generated with a white background! The function have text_color='red' and transparent=True as default so you dont need to any arguments if you want that combination. 
+When running the pie_chart funtion you have the option to switch the text and label color to whatever you want, you also have the option to remove the transparent option for the saved png which then will be generated with a white background! The function have text_color='red' and transparent=True as default so you dont need to add any arguments if you want that combination. 
 
 ```Python
 # Example of how to change it to black text with a white background
