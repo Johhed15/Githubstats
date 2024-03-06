@@ -83,4 +83,14 @@ def get_languages(repos):
 
 Now you just need to run these functions to download the data, or you could use my pie_chart function which does it for you to create the vizualisation!
 
-Now you are done!!
+Upload the image to your repository and use this code with the link to your image.
+
+```md
+<img src="https://github.com/username/repository/blob/main/lang-statistics.png" alt="Graphic">	
+
+```
+<img src="https://github.com/Johhed15/Johhed15/blob/main/lang-statistics.png" alt="Graphic">	
+
+
+
+Commit and now you are done!!
