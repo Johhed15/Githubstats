@@ -14,9 +14,9 @@ In this file you can change how Github should calculate each file within each re
 
 *.ipynb linguist-language=Python 
 
-# Rmd to R
+# pdf to R(if you, like me, save reports as pdf)
 
-*.rmd linguist-language=R
+*.pdf linguist-language=R
 
 ```
 <br>
