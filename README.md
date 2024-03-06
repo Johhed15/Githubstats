@@ -81,6 +81,6 @@ def get_languages(repos):
 
 ## Step 3:
 
-Now you just need to run these functions to doawnload the data, or you could use my pie_chart function which does it for you to create the vizualisation!
+Now you just need to run these functions to download the data, or you could use my pie_chart function which does it for you to create the vizualisation!
 
 Now you are done!!
