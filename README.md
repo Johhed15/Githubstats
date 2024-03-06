@@ -7,7 +7,8 @@ Just Copy the code from the files above and follow the steps below to create you
 
 """
 First you need to create a .gitattributes file in every repository that calculates the statistics wrong.
-In this file you can change how Github should calculate each file within each repository with the following code:
+In this file you can change how Github should calculate each file within each repository with the
+following code:
 """
 
 # example from jupyter notebook to python
