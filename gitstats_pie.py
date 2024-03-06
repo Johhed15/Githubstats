@@ -36,11 +36,11 @@ def get_languages(repos):
                     languages[lang] += bytes
                 else:
                     languages[lang] = bytes
-    sorted_languages = dict(sorted(languages.items(), key=lambda item: item[1], reverse=True))
+    sorted_languages = dict(sorted(languages.items(), key=lambda item: item[1], reverse=True)) # sorting
     return sorted_languages
 
 # creating pie chart and saving it
-def pie_chart():
+def pie_chart(text_color):
     # getting our data
     rep=get_repositories()
     lang = get_languages(rep)
@@ -67,16 +67,16 @@ def pie_chart():
               '#FF00FF', '#FFFF00', '#00FFFF', '#FF6600', '#FF0066', '#0066FF']
 
     explode = (0.03,)*len(sizes)
-    plt.figure(figsize=(14, 8), facecolor='#24292e') # githubs grey color as background
+    plt.figure(figsize=(12, 6), facecolor='#24292e') # githubs grey color as background
     # creating the pie chart
-    plt.pie(sizes, labels=labels,colors=colors[:len(sizes)], autopct='%1.1f%%',explode=explode, shadow=False, textprops={'fontweight': 'bold', 'color': 'white','fontsize': 16})
+    plt.pie(sizes, labels=labels,colors=colors[:len(sizes)], autopct='%1.1f%%',explode=explode, shadow=False, textprops={'fontweight': 'bold', 'color': text_color,'fontsize': 16})
     plt.axis('equal')
     
     # Adding legend
     plt.legend(loc='best', labels=labels)
 
-    plt.title(f'Distribution of Languages in {username}`s Repositories',fontweight='bold', fontsize=18, color='white')
+    plt.title(f'Distribution of Languages in {username}`s Repositories',fontweight='bold', fontsize=18, color=text_color)
     plt.savefig('lang-statistics.png', bbox_inches='tight',  transparens=True)
     plt.show()
     
-pie_chart()
+pie_chart('red')
