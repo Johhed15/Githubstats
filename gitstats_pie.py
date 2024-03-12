@@ -80,3 +80,54 @@ def pie_chart(text_color='red',transparent=True):
     plt.show()
     
 pie_chart()
+
+
+
+
+# Function to create a bar_chart of your languages
+def bar_chart(text_color='black', transparent=True):
+    # Getting our data
+    rep = get_repositories()
+    lang = get_languages(rep)
+
+    # Picking out language and values
+    labels = list(lang.keys())
+    sizes = list(lang.values())
+
+    # Filtering out small languages
+    total = float(sum(sizes))
+    sizes = [round((i / total) * 100, 1) for i in sizes]
+    filtered_sizes = [s for s in sizes if s >= 0.01]
+    filtered_labels =  labels[:len(filtered_sizes)]
+
+    # Custom color palette with arbitrary number of colors
+    colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b',
+              '#e377c2', '#7f7f7f', '#bcbd22', '#17becf', '#1a55FF', '#00FF00',
+              '#FF00FF', '#FFFF00', '#00FFFF', '#FF6600', '#FF0066', '#0066FF']
+
+    plt.figure(figsize=(12, 6))  
+    bars = plt.bar(filtered_labels, filtered_sizes, color=colors[:len(filtered_sizes)])
+    
+    # Adding text labels in the middle of the bar
+    for bar, size in zip(bars, filtered_sizes):
+        plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height() / 2,
+                 f'{size}%', ha='center', va='bottom', color=text_color, fontweight='bold', fontsize=12)
+    
+    plt.xlabel('Languages', fontweight='bold', color=text_color, fontsize=14)
+    plt.ylabel('Percentage', fontweight='bold', color=text_color, fontsize=14)
+    plt.title(f'Distribution of Languages in {username}`s Repositories', fontweight='bold', fontsize=18, color=text_color)
+    
+    # Adjusting appearance
+    plt.xticks(rotation=45, ha='right', fontsize=12, fontweight='bold', color=text_color)
+    plt.yticks(fontsize=12, fontweight='bold', color=text_color)
+
+    # Saving and showing the plot
+    plt.savefig('lang-bar-chart.png', bbox_inches='tight', transparent=transparent)
+    plt.show()
+
+
+bar_chart()
+
+
+
+
