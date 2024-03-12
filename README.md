@@ -1,5 +1,11 @@
 # How to get your own GitHub stats!!
 
+## Current functions
+- get_repositories() : Retrieve repositories and return a dictionary
+- get_languages() : Extracst languages from the retrieved dictionary and return them where keys are the languages and the values are number of bits
+- pie_chart() : Creates and saves a pie chart with the data from get_languages
+- bar_chart() : Creates and saves a bar chart with the data from get_languages
+
 Just Copy the code from the files above and follow the steps below to create your own GitHub-stats!! 
 
 ## Step 1:
