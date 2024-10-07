@@ -74,6 +74,9 @@ def get_languages(repos):
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
             repo_languages = response.json()
+            # Replace "Jupyter Notebook" with "Python"
+            repo_languages = {lang if lang != "Jupyter Notebook" else "Python": bytes for lang, bytes in repo_languages.items()}
+           
             for lang, bytes in repo_languages.items():
                 if lang in languages:
                     languages[lang] += bytes
