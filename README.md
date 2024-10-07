@@ -103,7 +103,7 @@ Upload the image to your repository and use the code below with the link to your
 
 ```
 
-<img src="https://github.com/Johhed15/Johhed15/blob/main/lang-statistics.png" alt="Graphic">	
+<img src="https://github.com/Johhed15/Johhed15/blob/main/lang-statistics.png1" alt="Graphic">	
 
 
 
